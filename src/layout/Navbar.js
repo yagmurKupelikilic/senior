@@ -8,13 +8,13 @@ function Navbar({title}) {
    <a href="/login" className="navbar-brand">{title}</a>
   
    <ul className="navbar-nav ml-auto">
-     <li className="nav-item active">
+     {/* <li className="nav-item active">
      <Link to ="/login" className="nav-link" >Login</Link>
      </li>
 
      <li className="nav-item active">
         <Link to ="/register" className="nav-link" >Register</Link>
-     </li>
+     </li> */}
 
      </ul>
    </nav>

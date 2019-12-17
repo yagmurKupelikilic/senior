@@ -1,8 +1,9 @@
    
-    .seozeo {
+    .bilkentImage {
       display: block;
+      margin-left: 80px;
       float: right;
-      width: 360px;
+      width: 250px;
     }
     .card {
       display: block;

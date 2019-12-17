@@ -11,7 +11,7 @@ class Account extends Component {
     const token = localStorage.getItem("token")
     let loggedIn = false
     this.state = {
-      username: "",
+      name: "",
       office: "",
       orderType: "",
       amount: 0,
@@ -37,11 +37,11 @@ class Account extends Component {
 
   addOrder = (e) => {
     e.preventDefault(); //to prevent refreshing of the page
-    const { username, office, orderType, amount, linkTo, status, price } = this.state;
+    const { name, office, orderType, amount, linkTo, status, price } = this.state;
 
     const newOrder = {
       id: uniqid(),
-      username: username,
+      name: name,
       office: office,
       orderType:orderType,
       amount:amount,
@@ -78,14 +78,14 @@ class Account extends Component {
     if(this.state.loggedIn){
       return <Redirect to="/user" />
     }
-    const { username, office, orderType, amount, linkTo, status, price } = this.state;
+    const { name, office, orderType, amount, linkTo, status, price } = this.state;
 
     return (
     
         
           <div id="accountNavbar">
             <nav className="navbar-nav navbar-expand-lg navbar-dark bg-dark mb-3 p-3">
-              <a href="/login" className="navbar-brand">{"ZeoDemander"}</a>
+              <a href="/login" className="navbar-brand">{"BilSports"}</a>
 
               <ul className="navbar-nav ml-auto">
                 <li className="nav-item active">
@@ -101,11 +101,11 @@ class Account extends Component {
             </nav>
 
 
-            <div className="col-md-8 mb-4">
+            <div className="announcementForm">
 
               <div className="card">
                 <div className="card-header">
-                  <h4>ORDER FORM</h4>
+                  <h4>ANNOUNCEMENT</h4>
                 </div>
                 <div className="card-body">
                   {
@@ -118,12 +118,12 @@ class Account extends Component {
                   <form onSubmit={this.addOrder}>
 
                     <div className="form-group">
-                      <label htmlform="username">Username</label>
+                      <label htmlform="name">Announcement Name:</label>
                       <input
                         type="text"
-                        name="username"
-                        id="username"
-                        value = {username}
+                        name="name"
+                        id="name"
+                        value = {name}
                         placeholder="Enter Username" 
                         className="form-control"
                         onChange = {this.changeInput}

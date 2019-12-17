@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import "./Login.css";
-import seozeo from '../seozeo.png';
+import bilkentImage from '../bilkentImage.png';
 import Navbar from '../layout/Navbar';
 import {Redirect} from 'react-router-dom'
 
@@ -32,26 +32,49 @@ export default class Login extends Component {
     e.preventDefault();
    const { email, password} = this.state
    //login
-   if(email === "yagmur.kupelikilic@icerik.com"  && password === "123"){
-     localStorage.setItem("token", "kedfjhdlkjvfdkjhg")
+   if(email === "yagmurkupelikilic@gmail.com"  && password === "123"){
+     localStorage.setItem("token", "yagmur")
      this.setState({
        loggedIn: true
      })
-   }
+   }else if(email === "arcakurumoglu@gmail.com" && password ==="arca"){
+    localStorage.setItem("token", "arca")
+    this.setState({
+      loggedIn: true
+    })
+  }else if(email === "aalpersakar@gmail.com" && password ==="alper"){
+    localStorage.setItem("token", "alper")
+    this.setState({
+      loggedIn: true
+    })
+  }else if(email === "berkaykara@gmail.com" && password ==="berkay"){
+    localStorage.setItem("token", "berkay")
+    this.setState({
+      loggedIn: true
+    })
   }
+}
 
  
   render() {
+    const { email, password} = this.state
+
     if(this.state.loggedIn){
+      if(email === "aalpersakar@gmail.com" && password ==="alper"){
+        return <Redirect to="/order" />
+      }
+      else{
       return <Redirect to="/account" />
+        
+      }
     }
     return (
       <div id="login">
-     <Navbar title ="ZeoDemander"/>
+     <Navbar title ="BilSports"/>
 
       <div className= "col-md-8">
-      <div className="seozeo">
-         <img src={seozeo} alt="seo"/>
+      <div className="bilkentImage">
+         <img src={bilkentImage} alt="bilkentImage"/>
         </div>
       <div className="card">
       <div className="card-body">

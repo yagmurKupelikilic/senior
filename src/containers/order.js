@@ -5,7 +5,7 @@ export default class Orders extends Component {
     return (
       <div>
         <nav className="navbar-nav navbar-expand-lg navbar-dark bg-dark mb-3 p-3">
-         <a href="/login" className="navbar-brand">{"ZeooDemander"}</a>
+         <a href="/login" className="navbar-brand">{"BilSports"}</a>
          <ul className="navbar-nav ml-auto">
          <li className="nav-item active">
            <Link to ="/logout" className="nav-link" >Logout</Link>
