@@ -1,0 +1,19 @@
+   
+    .bilkentImage {
+      display: block;
+      margin-left: 80px;
+      float: right;
+      width: 250px;
+    }
+    .card {
+      display: block;
+      float: left;
+      
+    }
+
+    .form{
+      margin-top: 50px;
+    }
+   
+  
+    
